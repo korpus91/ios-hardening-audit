@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ios-hardening-audit"
+version = "0.1.0"
+description = "Offline security hardening audit of Cisco IOS / IOS-XE running-configs"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.9"
+authors = [{ name = "Arkadiy Ayrapetov" }]
+dependencies = []
+keywords = ["cisco", "ios-xe", "hardening", "security", "audit", "cis"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Operating System :: OS Independent",
+  "Intended Audience :: System Administrators",
+  "Topic :: System :: Networking",
+  "Topic :: Security",
+]
+
+[project.urls]
+Homepage = "https://github.com/korpus91/ios-hardening-audit"
+Issues = "https://github.com/korpus91/ios-hardening-audit/issues"
+
+[project.scripts]
+ios-harden = "hardening:main"
+
+[tool.setuptools]
+py-modules = ["hardening"]
